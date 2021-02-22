@@ -6,7 +6,7 @@ jobs:
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
-      - name: sanity-check
+      - name: cml_run
         env:
           repo_tokens: ${{ secrets.GITHUB_TOKEN }}
         run: |
