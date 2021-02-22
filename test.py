@@ -13,5 +13,5 @@ y_hat = model.predict(X_test)
 
 metric = mse(y, y_hat)
 with open("metrics.txt", 'w') as outfile:
-    outfile.write(f"Test variance explained: {metric:.2f}")
+    outfile.write(f"Test RMSE : {metric**(1/2):.2f}")
 
