@@ -1,5 +1,6 @@
 import pickle
 from sklearn.datasets import make_regression
+from sklearn.metrics import mean_squared_error as mse 
 import json
 
 model = pickle.load(open("models/model.pkl", "rb"))
@@ -9,3 +10,8 @@ X_test, y = make_regression(1000,n_features = 10)
 
 # Test on the model
 y_hat = model.predict(X_test)
+
+metric = mse(y, y_hat)
+with open("metrics.txt", 'w') as outfile:
+    outfile.write(f"Test variance explained: {metric:.2f}")
+
