@@ -18,3 +18,5 @@ if not os.path.isdir("models/"):
 
 filename = 'models/model.pkl'
 pickle.dump(reg, open(filename, 'wb'))
+with open("model.txt", 'w') as outfile:
+    outfile.write(str(reg))
