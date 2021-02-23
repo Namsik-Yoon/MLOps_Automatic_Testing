@@ -14,9 +14,6 @@ y_hat = model.predict(X_test)
 # squared=Fase -> False returns RMSE value
 metric = mse(y, y_hat, squared=False)
 
-with open("metrics.json", 'w') as outfile:
-    json.dump({'rmse':metric}, outfile)
-    
 with open("metrics.txt", 'w') as outfile:
     outfile.write(f"Test RMSE : {metric:.2f}")
 
