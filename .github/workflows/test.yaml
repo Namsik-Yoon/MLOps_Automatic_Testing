@@ -17,6 +17,7 @@ jobs:
           
           echo '## CURRENT MODEL' > report.md
           cat model.txt >> report.md
+          echo '' >> report.md
 
           echo '## MODEL METRICS' >> report.md
           cat metrics.txt >> report.md
