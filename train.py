@@ -1,5 +1,6 @@
 from sklearn.datasets import make_regression
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import ElasticNet
 from sklearn.ensemble import RandomForestRegressor
 import os
 import pickle
@@ -7,7 +8,7 @@ import pickle
 X, y = make_regression(10000,n_features = 10)
 
 # Train a model
-reg = RandomForestRegressor().fit(X, y.ravel())
+reg = ElasticNet().fit(X, y.ravel())
 # Print out training r2
 print(reg.score(X,y.ravel() ))
 

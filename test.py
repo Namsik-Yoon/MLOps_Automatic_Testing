@@ -11,7 +11,9 @@ X_test, y = make_regression(1000,n_features = 10)
 # Test on the model
 y_hat = model.predict(X_test)
 
-metric = mse(y, y_hat)
+# squared=Fase -> False returns RMSE value
+metric = mse(y, y_hat, squared=False)
+
 with open("metrics.txt", 'w') as outfile:
-    outfile.write(f"Test RMSE : {metric**(1/2):.2f}")
+    outfile.write(f"Test RMSE : {metric:.2f}")
 
