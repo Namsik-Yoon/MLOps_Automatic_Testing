@@ -1,0 +1,10 @@
+test:
+  cmd: python test.py
+  deps:
+  - path: test.py
+    md5: c1f54799bc9abb9f8ab230cd299bf90b
+    size: 491
+  outs:
+  - path: metrics.txt
+    md5: 95450cb238d9449b2a6678c47954a714
+    size: 18

@@ -1,0 +1,7 @@
+stages:
+  test:
+    cmd: python test.py
+    deps:
+    - test.py
+    outs:
+    - metrics.txt
