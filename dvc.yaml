@@ -3,5 +3,6 @@ stages:
     cmd: python test.py
     deps:
     - test.py
-    outs:
-    - metrics.json
+    metrics:
+    - metrics.json:
+      cache: false
