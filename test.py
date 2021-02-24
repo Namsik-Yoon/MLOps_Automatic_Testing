@@ -16,6 +16,6 @@ y_hat = model.predict(X_test)
 metric = mse(y, y_hat, squared=False)
 
 with open("metrics.json", 'w') as outfile:
-    json.dump({ "model_name": model_name, "RMSE": rmse}, outfile)
+    json.dump({ "model_name": model_name, "RMSE": metric}, outfile)
 
 
