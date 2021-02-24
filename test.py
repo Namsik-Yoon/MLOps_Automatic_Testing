@@ -17,3 +17,4 @@ metric = mse(y, y_hat, squared=False)
 with open("metrics.txt", 'w') as outfile:
     outfile.write(f"Test RMSE : {metric:.2f}")
 
+
