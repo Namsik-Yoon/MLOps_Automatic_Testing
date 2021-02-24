@@ -1,4 +1,10 @@
 stages:
+  train:
+  cmd: pyton train.py
+  deps:
+  - train.py
+  outs:
+  - model.txt
   test:
     cmd: python test.py
     deps:

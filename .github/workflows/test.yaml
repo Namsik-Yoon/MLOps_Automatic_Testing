@@ -16,8 +16,6 @@ jobs:
           git fetch --prune
           dvc metrics diff --show-md master > report.md
 
-          python train.py
-          python test.py
 
           echo '## CURRENT MODEL' > report.md
           cat model.txt >> report.md
