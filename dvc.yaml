@@ -4,4 +4,4 @@ stages:
     deps:
     - test.py
     outs:
-    - metrics.txt
+    - metrics.json
